@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ultimate Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="neon">
+
+<div class="container">
+
+    <h1>🎮 Ultimate Tic Tac Toe</h1>
+
+    <div class="controls">
+        <button onclick="setMode('2player')">2 Player</button>
+        <button onclick="setMode('ai')">AI Mode</button>
+
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <select onchange="changeTheme(this.value)">
+            <option value="neon">Neon</option>
+            <option value="light">Light</option>
+            <option value="cyber">Cyberpunk</option>
+        </select>
+
+        <button onclick="restartGame()">Restart</button>
+    </div>
+
+    <div class="scoreboard">
+        X: <span id="xScore">0</span> |
+        O: <span id="oScore">0</span> |
+        Draw: <span id="drawScore">0</span>
+    </div>
+
+    <div class="status" id="status">Player X's Turn</div>
+
+    <div class="board" id="board"></div>
+
+</div>
+
+<canvas id="confetti"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
 

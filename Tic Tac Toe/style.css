@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+
+/* Container */
+.container {
+    width: 95%;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 15px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.controls button,
+.controls select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    transform: scale(1.05);
+}
+
+/* Scoreboard */
+.scoreboard {
+    margin-bottom: 10px;
+}
+
+/* Status */
+.status {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+/* Themes */
+
+.neon {
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: #00ffcc;
+}
+
+.neon .container {
+    background: rgba(0,0,0,0.4);
+}
+
+.neon .cell {
+    background: #111;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.light {
+    background: #f4f4f4;
+    color: black;
+}
+
+.light .container {
+    background: white;
+}
+
+.light .cell {
+    background: #e0e0e0;
+}
+
+.cyber {
+    background: #1a0033;
+    color: #ff00ff;
+}
+
+.cyber .container {
+    background: rgba(51,0,102,0.7);
+}
+
+.cyber .cell {
+    background: #330066;
+    box-shadow: 0 0 12px #ff00ff;
+}
+
+/* Canvas fix */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
